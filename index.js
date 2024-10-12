@@ -1,6 +1,7 @@
 require("dotenv").config();
 const express = require("express");
 const db = require("./db/connect");
+const cors = require("cors");
 
 const app = express();
 
@@ -17,6 +18,7 @@ app.get("/", (req, res) => {
 // Middlewares
 app.use(express.json());
 // Yet to update CORS
+app.use(cors());
 
 
 // console.log(employeesRoutes);
